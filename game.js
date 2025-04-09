@@ -5,16 +5,16 @@ var color = ["green", "red", "yellow", "blue"];
 var userClickedPattern = [];
 var level = 0;
 
+youcanclick=false;
 
-
-$(document).keypress(function () {
+$(document).on("keypress click", function () {
 if (level===0) {
   
   nextSequence();
 }
 else if  (level===-1) {
 
-  $("h1").text("Press A Keu to Start");
+  $("h1").text("Press A Key Or Touch screen to Start");
   $("body").removeClass("game-over");
   level=0;
   gamePattern=[];
@@ -42,7 +42,8 @@ $(".btn").click(function () {
     console.log("game : "+gamePattern);
     checkSequence();
   }
-});
+}
+);
 
 function nextSequence() {
   userClickedPattern = [];
