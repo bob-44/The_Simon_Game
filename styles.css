@@ -84,7 +84,7 @@ body {
   color: #FEF2BF;
 }
 .row {
-  display:block;
+  display:inline-block;
   margin-bottom: 20px; 
 }
 
