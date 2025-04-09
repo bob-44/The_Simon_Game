@@ -12,7 +12,7 @@ body {
 
 .container {
   display: block;
-  width: 50%;
+  width:50%;
   margin: auto;
 
 }
@@ -65,4 +65,51 @@ body {
 }
 .fade-out {
   animation: fadeOut 0.1s ease-in-out;
+}
+
+/* General styling for the container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for each row */
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px; /* Add space between rows */
+}
+
+/* General styling for buttons */
+.btn {
+ 
+  display: inline-block; /* Ensure the div behaves like a block element */
+  cursor: pointer; /* Make it look clickable */
+}
+
+/* Color classes for buttons */
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .btn {
+    margin: 5px;
+    width: 120px;
+    height: 120px;
+  }
 }
