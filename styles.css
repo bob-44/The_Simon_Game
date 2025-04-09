@@ -1,117 +1,53 @@
+/* General body styling */
 body {
   text-align: center;
   background-color: #011F3F;
 }
 
+/* Level title styling */
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin: 5%;
   color: #FEF2BF;
 }
 
+/* Container for the game */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width:70%;
+  width: 70%;
   margin: auto;
-
 }
 
-.btn {
-  margin: 25px;
-  display: block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
-  border-radius: 20%;
-cursor: pointer;
-}
-
-
-.game-over {
-  background-color: red;
-  opacity: 0.8;
-}
-
-.red {
-  background-color: red;
-}
-
-.green {
-  background-color: green;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.yellow {
-  background-color: yellow;
-}
-
-.pressed {
-  box-shadow: 0 0 20px white;
-  background-color: grey;
-}
-
-@keyframes fadeIn {
-  from {opacity:0;}
-  to {opacity:1;}
-}
-@keyframes fadeOut {
-  from {opacity:1;}
-  to {opacity:0;}
-}
-.fade-in {
-  animation: fadeIn 0.1s ease-in-out 
-}
-.fade-out {
-  animation: fadeOut 0.1s ease-in-out;
-}
-body {
-  text-align: center;
-  background-color: #011F3F;
-}
-
-#level-title {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin:  5%;
-  color: #FEF2BF;
-}
+/* Row styling for button groups */
 .row {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 10px; 
+  flex-wrap: wrap; /* Allows wrapping if needed */
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 10px; /* Adds spacing between buttons */
+  margin-bottom: 10px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width:70%;
-  margin: auto;
-
-}
-
+/* Button styling */
 .btn {
-  margin: 25px;
-  display: block;
-  height: 200px;
-  width: 200px;
+  flex: 1 1 calc(50% - 20px); /* Buttons take up 50% of the row width minus the gap */
+  aspect-ratio: 1 / 1; /* Maintains square shape */
+  max-width: 200px; /* Optional: Limit the maximum size */
+  margin: 10px; /* Adjust margin for better spacing */
   border: 10px solid black;
   border-radius: 20%;
-cursor: pointer;
+  cursor: pointer;
 }
 
-
+/* Game over styling */
 .game-over {
   background-color: red;
   opacity: 0.8;
 }
 
+/* Button colors */
 .red {
   background-color: red;
 }
@@ -128,35 +64,44 @@ cursor: pointer;
   background-color: yellow;
 }
 
+/* Button pressed effect */
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
 
+/* Fade-in and fade-out animations */
 @keyframes fadeIn {
-  from {opacity:0;}
-  to {opacity:1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+
 @keyframes fadeOut {
-  from {opacity:1;}
-  to {opacity:0;}
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
+
 .fade-in {
-  animation: fadeIn 0.1s ease-in-out 
+  animation: fadeIn 0.1s ease-in-out;
 }
+
 .fade-out {
   animation: fadeOut 0.1s ease-in-out;
 }
-
-
-
 
 /* Responsive design for smaller screens */
 @media (max-width: 600px) {
   .btn {
-    margin: 5px;
-    width: 120px;
-    height: 120px;
+    flex: 1 1 calc(100% - 20px); /* Buttons take full width on smaller screens */
+    max-width: 120px; /* Optional: Limit the maximum size */
+    height: auto; /* Let aspect-ratio handle the height */
   }
 }
-
