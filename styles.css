@@ -84,11 +84,12 @@ body {
   color: #FEF2BF;
 }
 .row {
-  display:block;
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 20px; 
 }
 
-.
+
 
 .game-over {
   background-color: red;
@@ -129,5 +130,6 @@ body {
   }
   .container {
     width: 90%;
-}
+  }
+
 }
