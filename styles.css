@@ -84,7 +84,7 @@ body {
   color: #FEF2BF;
 }
 .row {
-  display:inline-block;
+  display:block;
   margin-bottom: 20px; 
 }
 
@@ -130,4 +130,4 @@ body {
   .container {
     width: 90%;
 }
-
+}
