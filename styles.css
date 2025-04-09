@@ -158,5 +158,8 @@ cursor: pointer;
     width: 120px;
     height: 120px;
   }
+  .container {
+    width: 90%; /* Increased container width */
+  }
 }
 
