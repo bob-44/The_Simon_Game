@@ -84,8 +84,7 @@ body {
   color: #FEF2BF;
 }
 .row {
-  display: flex;
-  justify-content: space-around;
+  display:block;
   margin-bottom: 20px; 
 }
 
