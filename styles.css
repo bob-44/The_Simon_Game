@@ -11,20 +11,32 @@ body {
 }
 
 .container {
-  display: block;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:70%;
   margin: auto;
 
 }
 
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px; 
+}
+
+
+
 .btn {
   margin: 25px;
-  display: inline-block;
+  display: block;
   height: 200px;
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
+cursor: pointer;
 }
+
 
 .game-over {
   background-color: red;
@@ -51,3 +63,74 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+@keyframes fadeOut {
+  from {opacity:1;}
+  to {opacity:0;}
+}
+.fade-in {
+  animation: fadeIn 0.1s ease-in-out 
+}
+.fade-out {
+  animation: fadeOut 0.1s ease-in-out;
+}
+body {
+  text-align: center;
+  background-color: #011F3F;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin:  5%;
+  color: #FEF2BF;
+}
+
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+@keyframes fadeOut {
+  from {opacity:1;}
+  to {opacity:0;}
+}
+.fade-in {
+  animation: fadeIn 0.1s ease-in-out 
+}
+.fade-out {
+  animation: fadeOut 0.1s ease-in-out;
+}
+
+
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .btn {
+    margin: 5px;
+    width: 120px;
+    height: 120px;
+  }
+  .container {
+    width: 90%;
+  }
+
+}
+
