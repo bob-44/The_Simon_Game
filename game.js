@@ -14,11 +14,14 @@ if (level===0) {
 }
 else if  (level===-1) {
 
-  $("h1").text("Press A Key Or Touch screen to Start");
+  setTimeout(() => {
+   $("h1").text("Press A Key Or Touch screen to Start");
   $("body").removeClass("game-over");
   level=0;
   gamePattern=[];
-  userClickedPattern=[];
+  userClickedPattern=[]; 
+  }, 1000);
+  
   
   
   }
@@ -130,6 +133,7 @@ function gameState(level) {
     {
       playSound("wrong");
     currentLevelText = "Game Over! Press any Key to Start Again!";
+    
     $("h1").text(currentLevelText);
     $("body").addClass("game-over");
    
