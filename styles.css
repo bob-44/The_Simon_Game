@@ -119,8 +119,8 @@ body {
 @media (max-width: 600px) {
   .btn {
     margin: 5px;
-    width: 800px;
-    height: 800px;
+    width: 80px;
+    height: 80px;
   }
   .container {
 width:80%
